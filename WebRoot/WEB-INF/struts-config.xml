@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans />
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action path="/hzps" type="com.csgw.action.HzpsAction" >
+     <forward name="admindelPrep2" path="/prep/prep.jsp" />
+      <forward name="upprep" path="/prep/index.jsp" />
+      <forward name="tejiadeltrave" path="/hzp/tejia.jsp" />
+      <forward name="hotdeltrave" path="/hzp/hot.jsp" />
+      <forward name="mdelPost" path="/member/prep/yi.jsp" />
+      <forward name="addType" path="/hzp/type.jsp" />
+      <forward name="deltrave" path="/index.jsp" />
+      <forward name="addprep" path="/index.jsp" />
+      </action>
+      <action
+      attribute="aloginForm"
+      input="admin/login.jsp"
+      name="aloginForm"
+      path="/alogin"
+      scope="request"
+      type="com.action.LoginAction">
+      <forward name="failed" path="admin/login.jsp" />
+      <forward name="success" path="admin/index.jsp" />
+    </action>
+    <action
+      attribute="aadminForm"
+      input="admin/system/adduser.jsp"
+      name="aadminForm"
+      path="/aadmin"
+      scope="request"
+      type="com.action.AdminAction">
+      <forward name="failed" path="admin/system/user.jsp" />
+      <forward name="success" path="admin/system/user.jsp" />
+      <forward name="ex" path="/aion/index.jsp" />
+    </action>
+    <action
+      attribute="adelAdminForm"
+      input="admin/system/user.jsp"
+      name="adelAdminForm"
+      path="/adelAdmin"
+      scope="request"
+      type="com.action.DelAdminAction">
+      <forward name="failed" path="admin/system/user.jsp" />
+      <forward name="success" path="admin/system/user.jsp" />
+      <forward name="ex" path="/aion/index.jsp" />
+    </action>
+    <action
+      attribute="aeditPwdForm"
+      input="admin/system/editpwd.jsp"
+      name="aeditPwdForm"
+      path="/aeditPwd"
+      scope="request"
+      type="com.action.EditPwdAction">
+      <forward name="failed" path="admin/system/editpwd.jsp" />
+      <forward name="success" path="admin/system/editpwd.jsp" />
+      <forward name="ex" path="/aion/index.jsp" />
+    </action>
+    <action path="/adelLog" type="com.action.DelLogAction" >
+    	<forward name="success" path="admin/system/log.jsp" />
+    	<forward name="ex" path="/aion/index.jsp" />
+    </action>
+    <action
+      input="admin/iframe/top.jsp"
+      path="/aexit"
+      type="com.action.ExitAction">
+      <forward name="success" path="/index.jsp" />
+    </action>
+    <action
+      input="admin/news/edit.jsp"
+      path="/anews"
+      type="com.action.NewsAction">
+      <forward name="success" path="admin/news/index.jsp" />
+      <forward name="search" path="admin/news/search.jsp" />
+      <forward name="ex" path="/aion/index.jsp" />
+    </action>
+    <action
+      input="admin/article/edit.jsp"
+      path="/aarticle"
+      type="com.action.ArticleAction">
+      <forward name="search" path="admin/article/search.jsp" />
+      <forward name="success" path="admin/article/index.jsp" />
+      <forward name="ex" path="/aion/index.jsp" />
+    </action>
+    <action
+      input="admin/post/edit.jsp"
+      path="/apost"
+      type="com.action.PostAction">
+      <forward name="success" path="admin/post/index.jsp" />
+      <forward name="ex" path="/aion/index.jsp" />
+	</action>     
+    <action
+      input="/aion/diy.jsp"
+      path="/adiy"
+      type="com.action.DiyAction">
+      <forward name="failed" path="/aion/diy.jsp" />
+      <forward name="success" path="/aion/diy.jsp" />
+    </action>
+    <action
+      input="admin/diy/index.jsp"
+      path="/amdiy"
+      type="com.action.MdiyAction">
+      <forward name="search" path="admin/diy/search.jsp" />
+      <forward name="success" path="admin/diy/index.jsp" />
+      <forward name="ss" path="admin/diy/s.jsp" />
+      <forward name="ex" path="/aion/index.jsp" />
+      <forward name="ff" path="admin/diy/f.jsp" />
+      <forward name="cha" path="admin/diy/cha2.jsp" />
+    </action>
+    <action
+      input="admin/orders/index.jsp"
+      path="/amorders"
+      type="com.action.MordersAction">
+      <forward name="ff" path="admin/orders/f.jsp" />
+      <forward name="ex" path="/aion/index.jsp" />
+      <forward name="success" path="admin/orders/index.jsp" />
+      <forward name="ss" path="admin/orders/s.jsp" />
+      <forward name="search" path="admin/orders/search.jsp" />
+    </action>
+    <action
+      input="admin/alone/index.jsp"
+      path="/aalone"
+      type="com.action.AloneAction">
+      <forward name="ex" path="/aion/index.jsp" />
+      <forward name="success" path="admin/alone/index.jsp" />
+    </action>
+    <action
+      input="/aion/buy.jsp"
+      path="/abuy"
+      type="com.action.BuyAction">
+      <forward name="success" path="/aion/buy.jsp" />
+    </action>
+    <action
+      input="/aion/gbook.jsp"
+      path="/agbook"
+      type="com.action.GbookAction">
+      <forward name="success" path="/aion/gbook.jsp" />
+    </action>
+    <action
+      input="admin/gbook/index.jsp"
+      path="/amgbook"
+      type="com.action.MgbookAction">
+      <forward name="ex" path="/aion/index.jsp" />
+      <forward name="success" path="admin/gbook/index.jsp" />
+      <forward name="replay" path="admin/gbook/r.jsp" />
+      <forward name="flag" path="admin/gbook/flag.jsp" />
+    </action>
+  </action-mappings>
+
+ 
+
+
+  <message-resources parameter="com.csgw.ApplicationResources" />
+</struts-config>
+
